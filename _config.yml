@@ -1,1 +1,15 @@
-title: timculverhouse.com
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+      title: tim.page
+
+markdown: kramdown
+
+plugins:
+  - jekyll-optional-front-matter
+
+kramdown:
+  hard_wrap: true

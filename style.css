@@ -1,74 +1,28 @@
-/*!
- * Based on LaTeX.css (https://latex.now.sh/)
- *
- * Source: https://github.com/vincentdoerig/latex-css
- * Licensed under MIT (https://github.com/vincentdoerig/latex-css/blob/master/LICENSE)
- * Modified by me, Tim
-*/
-
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Remove default margin */
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-dl,
-dd {
-  margin: 0;
-}
-
-/* Make default font-size 1.2rem and add smooth scrolling to anchors */
-html {
-  font-size: 1.2rem;
-  scroll-behavior: smooth;
-}
-
 body {
-  font-family: 'Palatino Linotype', Palatino, serif;
-  line-height: 1.8;
-
-  max-width: 80ch;
-  min-height: 100vh;
-  overflow-x: hidden;
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  line-height: 1.5;
   margin: 0 auto;
-  padding: 2rem 1.25rem;
-
-  color: hsl(0, 5%, 10%);
-  background-color: hsl(210, 20%, 98%);
-
-  text-rendering: optimizeLegibility;
+  padding: 0 1em;
+  max-width: 70ch;
+  font-size: 18px;
+  color: #333;
 }
 
-/* Give paragraphs some space */
-p{
-  margin: 1em 0;
+h1, h2, h3, h4, h5, h6 {
+  margin: 1em 0 0.5em 0;
+  line-height: 1.2em;
+  font-family: 'Palatino Linotype', Palatino, serif;
 }
 
 /* Make images easier to work with */
 img {
   max-width: 100%;
   display: block;
-  margin:auto;
+  margin: auto;
 }
 
-figcaption{
-  text-align:center;
+figcaption, img + em {
+  text-align: center;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -79,17 +33,18 @@ select {
   font: inherit;
 }
 
+/* Left bar on blockquotes */
+blockquote {
+  margin: 0;
+  padding: 0 2rem;
+  border-left: 0.2rem solid #777;
+}
+
 /* Prevent textarea from overflowing */
 textarea {
   width: 100%;
 }
 
-/* Natural flow and rhythm in articles by default */
-/*
-article > * + * {
-  margin-top: 1em;
-}
-*/
 /* Styles for inline code or code snippets */
 
 code,
@@ -139,41 +94,12 @@ tfoot th {
   border-top: 2px solid hsl(0, 0%, 70%);
 }
 
-/* Nested ordered list for ToC */
-nav ol {
-  counter-reset: item;
-  padding-left: 2rem;
-}
-nav li {
-  display: block;
-}
-nav li:before {
-  content: counters(item, '.') ' ';
-  counter-increment: item;
-  padding-right: 0.85rem;
-}
-
-/* Center definitions (most useful for display equations) */
-dl dd {
-  text-align: center;
-}
-
-/* Heading typography */
 /* h1 size override for consistent size independent of nesting*/
 h1 {
   font-size: 2rem;
+  text-align: center;
 }
 
-/* Dark Mode */
-/*
-@media (prefers-color-scheme: dark) {
-  body{
-    background-color: hsl(0, 0%, 0%);
-    color: hsl(210, 20%, 98%);
-  }
-
-  pre{
-    background: #333;
-  }
+.task-list-item {
+  list-style-type: none;
 }
-*/
