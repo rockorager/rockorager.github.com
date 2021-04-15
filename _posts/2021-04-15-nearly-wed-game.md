@@ -1,10 +1,8 @@
 ---
-layout: micropubpost
-date: '2021-04-15T01:29:47.248Z'
-title: nearly wed game
-mf-post-status:
-  - draft
-slug: nearly-wed-game
+title: Nearly Wed Questions
+layout: article
+category: article
+date: 2021-04-15 09:52:56
 ---
 # Nearly Wed Questions
 
@@ -16,7 +14,7 @@ slug: nearly-wed-game
 6. What is Mike’s favorite tv show?
 7. What is Mike&#39;s favorite color?
 8. What is Mikes’ most-repeated sentence or phrase?
-9.  If your house was on fire, what one thing would Mike grab before leaving?
+9. If your house was on fire, what one thing would Mike grab before leaving?
 10. What one item of yours would Mike love to get rid of?
 11. What is Mike’s favorite restaurant?
 12. What animal would Mike choose to be?
