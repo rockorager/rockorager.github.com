@@ -1,5 +1,5 @@
 ---
 title: Notes
-layout: category-index
+layout: posts
 tag: note
 ---

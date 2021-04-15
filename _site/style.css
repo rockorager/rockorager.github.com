@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 img {
   max-width: 100%;
   display: block;
-  margin: auto;
+  margin: 0.5em auto;
 }
 
 figcaption, img + em {
@@ -102,4 +102,13 @@ h1 {
 
 .task-list-item {
   list-style-type: none;
+}
+
+article {
+  padding-bottom: 2rem;
+}
+
+article footer {
+  font-size: 14px;
+  text-align: right;
 }
