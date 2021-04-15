@@ -8,6 +8,8 @@ defaults:
 
 markdown: kramdown
 
+permalink:
+
 plugins:
   - jekyll-optional-front-matter
 
