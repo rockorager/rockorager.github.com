@@ -6,10 +6,13 @@ defaults:
       layout: "default"
       title: tim.page
 
-markdown: kramdown
+
+permalink: /:categories/:year-:month-:day-:title:output_ext
 
 plugins:
   - jekyll-optional-front-matter
+
+markdown: kramdown
 
 kramdown:
   hard_wrap: true
