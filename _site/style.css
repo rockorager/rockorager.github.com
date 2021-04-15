@@ -1,0 +1,105 @@
+body {
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  line-height: 1.5;
+  margin: 0 auto;
+  padding: 0 1em;
+  max-width: 70ch;
+  font-size: 18px;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1em 0 0.5em 0;
+  line-height: 1.2em;
+  font-family: 'Palatino Linotype', Palatino, serif;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+figcaption, img + em {
+  text-align: center;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Left bar on blockquotes */
+blockquote {
+  margin: 0;
+  padding: 0 2rem;
+  border-left: 0.2rem solid #777;
+}
+
+/* Prevent textarea from overflowing */
+textarea {
+  width: 100%;
+}
+
+/* Styles for inline code or code snippets */
+
+code,
+pre,
+kbd,
+samp {
+  font-family: 'Courier', monospace;
+}
+pre {
+  padding: 1rem 1.4rem;
+  max-width: 100%;
+  overflow: auto;
+  border-radius: 4px;
+  background: hsl(210, 28%, 93%);
+}
+pre code {
+  font-size: 95%;
+  position: relative;
+}
+kbd {
+  background: hsl(210, 5%, 100%);
+  border: 1px solid hsl(210, 5%, 70%);
+  border-radius: 2px;
+  padding: 2px 4px;
+  font-size: 75%;
+}
+
+/* Make table 100% width, add borders between rows */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  max-width: 100%;
+}
+th,
+td {
+  text-align: left;
+  padding: 0.5rem;
+}
+td {
+  border-bottom: 1px solid hsl(0, 0%, 85%);
+}
+thead th {
+  border-bottom: 2px solid hsl(0, 0%, 70%);
+}
+tfoot th {
+  border-top: 2px solid hsl(0, 0%, 70%);
+}
+
+/* h1 size override for consistent size independent of nesting*/
+h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.task-list-item {
+  list-style-type: none;
+}

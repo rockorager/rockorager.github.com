@@ -8,7 +8,7 @@ defaults:
 
 markdown: kramdown
 
-permalink:
+permalink: /:categories/:year-:month-:day-:title:output_ext
 
 plugins:
   - jekyll-optional-front-matter

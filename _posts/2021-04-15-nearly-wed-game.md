@@ -4,7 +4,6 @@ layout: article
 category: article
 date: 2021-04-15 09:52:56
 ---
-# Nearly Wed Questions
 
 1. What is Mike’s favorite food?
 2. What is Mike’s dream job?
