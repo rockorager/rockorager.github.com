@@ -15,7 +15,7 @@
             {% else %}
               <span class="e-content">{{ post.content}}</span>
             {% endif %}
-            <footer><time class="dt-published" datetime="{{post.date}}"><a href="{{ post.url }}" class="u-url">{{ post.date | date_to_string }}</a></time></footer>
+            <footer><time class="dt-published" datetime="{{post.date}}"><a href="{{ post.url }}" class="u-url">{{ post.date | date_to_string }}</a></time><a href="/" class="u-author"></a></footer>
           </article>
             {% endfor %}
     

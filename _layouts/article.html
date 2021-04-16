@@ -2,6 +2,6 @@
     <article class="h-entry">
         <h1 class="p-name">{{ page.title}}</h1>
         <div class="e-content">{{ content }}</div>
-        <footer><time class="dt-published" datetime="{{page.date}}">Posted {{ page.date | date_to_string }}</time></footer>
+        <footer><time class="dt-published" datetime="{{page.date}}">Posted {{ page.date | date_to_string }}</time><a href="/" class="u-author"></a></footer>
     </article>
 {% include foot.html %}
