@@ -6,3 +6,6 @@ markdown: kramdown
 
 kramdown:
   hard_wrap: true
+
+plugins:
+  - jekyll-feed
