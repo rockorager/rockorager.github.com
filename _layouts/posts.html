@@ -15,7 +15,7 @@
             {% else %}
               <span class="e-content">{{ post.content}}</span>
             {% endif %}
-            <footer><time class="dt-published" datetime="{{post.date}}"><a href="{{ post.url }}" class="u-url">{{ post.date | date_to_string }}</a></time><a href="/" class="u-author"></a></footer>
+            <footer><time class="dt-published" datetime="{{post.date}}"><a href="{{ post.url }}" class="u-url">{{ post.date | date_to_string }}</a></time><a hidden class="h-card p-author" href="https://www.timculverhouse.com"><img src="/tim.jpeg" alt="Tim Culverhouse">Tim Culverhouse</a></footer>
           </article>
             {% endfor %}
     
