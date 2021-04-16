@@ -1,5 +1,5 @@
 ---
 title: Articles
 layout: posts
-tag: article
+tag: articles
 ---

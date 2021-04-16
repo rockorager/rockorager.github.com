@@ -8,12 +8,12 @@
 
   {% for post in filtered_posts %}
     <article class="h-entry">
-            {% if post.category == "article" %}
+            {% if post.category == "articles" %}
               <h2 class="p-name">{{post.title}}</h2>
               <span class="e-content">{{post.excerpt}} 
                 <p>(<a href="{{ post.url }}" class="u-url">read more</a>)</p></span>
             {% else %}
-              <span class="p-content">{{ post.content}}</span>
+              <span class="e-content">{{ post.content}}</span>
             {% endif %}
             <footer><time class="dt-published" datetime="{{post.date}}"><a href="{{ post.url }}" class="u-url">{{ post.date | date_to_string }}</a></time></footer>
           </article>

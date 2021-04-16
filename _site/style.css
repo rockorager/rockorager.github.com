@@ -2,6 +2,7 @@ body {
   font-family: 'helvetica neue', helvetica, arial, sans-serif;
   line-height: 1.5;
   margin: 0 auto;
+  margin-bottom: 1rem;
   padding: 0 1em;
   max-width: 70ch;
   font-size: 18px;
@@ -108,7 +109,26 @@ article {
   padding-bottom: 2rem;
 }
 
-article footer {
+footer {
   font-size: 14px;
   text-align: right;
+}
+
+header {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-top: 1em;
+  font-size: 16px;
+}
+
+header a {
+  color: #888;
+  text-decoration: none;
+  margin-left: 2em;
+}
+
+hr {
+  border-top: 1px solid #888;
+  margin-bottom: 2rem;
 }

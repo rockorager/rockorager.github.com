@@ -1,3 +1,6 @@
 {% include head.html %}
-    {{ content }}
+    <article class="h-entry">
+    <div class="p-name e-content">{{ content }}</div>
+    <footer><time class="dt-published" datetime="{{page.date}}">Posted {{ page.date | date_to_string }}</time></footer>
+    </article>
 {% include foot.html %}

@@ -1,5 +1,6 @@
 ---
 title: yoga
+layout: page
 ---
 
 # Yoga

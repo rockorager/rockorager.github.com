@@ -1,7 +1,7 @@
 ---
 title: This is an article
 layout: article
-category: article
+category: articles
 date: 2021-04-15 09:52:56
 ---
 
