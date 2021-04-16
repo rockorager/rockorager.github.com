@@ -7,5 +7,10 @@ markdown: kramdown
 kramdown:
   hard_wrap: true
 
-plugins:
-  - jekyll-feed
+# site data 
+url: https://www.timculverhouse.com
+title: CulverWeb
+description: Tim Culverhouse's Website
+author: 
+  name: Tim Culverhouse
+
