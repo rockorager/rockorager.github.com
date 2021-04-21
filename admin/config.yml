@@ -18,8 +18,8 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "note"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Updated Date", name: "updated", widget: "datetime"}
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss ZZ"}
+      - {label: "Updated Date", name: "updated", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss ZZ"}
       - {label: "Category", name: "category", widget: "hidden", default: "notes"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "articles" # Used in routes, e.g., /admin/collections/blog
@@ -31,8 +31,8 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "article"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Updated Date", name: "updated", widget: "datetime"}
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss ZZ"}
+      - {label: "Updated Date", name: "updated", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss ZZ"}
       - {label: "Category", name: "category", widget: "hidden", default: "articles"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
@@ -44,6 +44,6 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Updated Date", name: "updated", widget: "datetime"}
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss ZZ"}
+      - {label: "Updated Date", name: "updated", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss ZZ"}
       - {label: "Body", name: "body", widget: "markdown"}
