@@ -6,7 +6,7 @@ backend:
 
 media_folder: "assets/img"
 
-site:url: https://timculverhouse.com
+site_url: https://timculverhouse.com
 
 collections:
   - name: "notes" # Used in routes, e.g., /admin/collections/blog
