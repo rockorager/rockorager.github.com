@@ -2,7 +2,8 @@ backend:
   name: github
   branch: master
   repo: rockorager/rockorager.github.io
-  
+  site_domain: zealous-mclean-9dc54a.netlify.com
+
 
 publish_mode: editorial_workflow # does not autopublish, used for drafts
 
