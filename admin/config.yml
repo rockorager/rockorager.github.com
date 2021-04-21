@@ -10,15 +10,35 @@ publish_mode: editorial_workflow # does not autopublish, used for drafts
 media_folder: "assets/img"
 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
+  - name: "notes" # Used in routes, e.g., /admin/collections/blog
+    label: "Note" # Used in the UI
     folder: "_posts/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Layout", name: "layout", widget: "select", options: ["note","article"]}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "note"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Category", name: "category", widget: "select", options: ["notes","articles"]}
+      - {label: "Category", name: "category", widget: "hidden", default: "notes"}
       - {label: "Body", name: "body", widget: "markdown"}
-  
+  - name: "articles" # Used in routes, e.g., /admin/collections/blog
+    label: "Article" # Used in the UI
+    folder: "_posts/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "article"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Category", name: "category", widget: "hidden", default: "articles"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "pages" # Used in routes, e.g., /admin/collections/blog
+    label: "Page" # Used in the UI
+    folder: "/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "article"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
