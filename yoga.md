@@ -1,6 +1,8 @@
 ---
-title: yoga
+title: Yoga
 layout: page
+date: 2021-04-21T16:50:27.689Z
+updated: 2021-04-21T16:50:57.103Z
 ---
 
 # Yoga
