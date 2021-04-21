@@ -19,7 +19,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "note"}
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss ZZ"}
-      - {label: "Updated Date", name: "updated", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss ZZ", required: "false", default: ""}
+      - {label: "Updated Date", name: "updated", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss ZZ", required: "false"}
       - {label: "Category", name: "category", widget: "hidden", default: "notes"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "articles" # Used in routes, e.g., /admin/collections/blog
@@ -32,7 +32,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "article"}
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss ZZ"}
-      - {label: "Updated Date", name: "updated", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss ZZ", required: "false", default: ""}
+      - {label: "Updated Date", name: "updated", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss ZZ", required: "false"}
       - {label: "Category", name: "category", widget: "hidden", default: "articles"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
@@ -45,5 +45,5 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss ZZ"}
-      - {label: "Updated Date", name: "updated", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss ZZ", required: "false", default: ""}
+      - {label: "Updated Date", name: "updated", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss ZZ", required: "false"}
       - {label: "Body", name: "body", widget: "markdown"}
