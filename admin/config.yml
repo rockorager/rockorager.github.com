@@ -6,11 +6,14 @@ backend:
 
 media_folder: "assets/img"
 
+site:url: https://timculverhouse.com
+
 collections:
   - name: "notes" # Used in routes, e.g., /admin/collections/blog
     label: "Note" # Used in the UI
     folder: "_posts/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
+    filter: {field: "category", value: "notes"}
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
@@ -24,6 +27,7 @@ collections:
     folder: "_posts/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    filter: {field: "category", value: "articles"}
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "article"}
@@ -35,6 +39,7 @@ collections:
     label: "Page" # Used in the UI
     folder: "/" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
+    filter: {field: "layout", value: "page"}
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
