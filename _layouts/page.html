@@ -1,3 +1,14 @@
 {% include head.html %}
-    {{ content }}
+    <article class="h-entry">
+        <h1 class="p-name">{{ page.title}}</h1>
+        <div class="e-content">{{ content }}</div>
+        <footer>
+            <time class="dt-published" datetime="{{page.date}}">Posted {{ page.date | date_to_string }}</time>
+            <a hidden class="h-card p-author" href="https://www.timculverhouse.com"><img src="/assets/img/tim.jpeg" alt="Tim Culverhouse">Tim Culverhouse</a>
+            {% if page.updated != "" %}    
+            <br>
+            <time class="dt-published" datetime="{{page.updated}}">Updated {{ page.updated | date_to_string }}</time>
+            {% endif %}
+        </footer>
+    </article>
 {% include foot.html %}

@@ -5,10 +5,6 @@ date: 2021-04-21 12:03:11 -0500
 updated: ""
 ---
 
-# Yoga
-
-A list of my favorite yoga sessions.
-
 ## 20 minutes or less
 
 [10, Kassandra, 30 days](https://www.youtube.com/playlist?list=PLW0v0k7UCVrlLpvX-rz-mrGCoElFpj44D)
