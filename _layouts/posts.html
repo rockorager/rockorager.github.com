@@ -7,6 +7,9 @@
   {% endif %}
 
   {% for post in filtered_posts %}
+    {% assign full_url = site.url | append: post.url %}
+    {% assign reactions = site.data.webmentions.links | where: "target", full_url %}
+
     <article class="h-entry">
             {% if post.category == "articles" %}
               <h2 class="p-name">{{post.title}}</h2>
@@ -19,7 +22,10 @@
             <a hidden class="h-card p-author" href="https://www.timculverhouse.com"><img src="/assets/img/tim.jpeg" alt="Tim Culverhouse">Tim Culverhouse</a>
               <span class="e-content">{{ post.content}}</span>
             {% endif %}
+            {% if reactions.size >0 %}
+            <p class="reactions">{{ reactions.size }} Reactions</p>
+            {% endif %}
           </article>
             {% endfor %}
-    
+
 {% include foot.html %}
