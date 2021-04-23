@@ -140,3 +140,24 @@ hr {
   border-top: 1px solid #888;
   margin-bottom: 2rem;
 }
+
+.avatar {
+  display: inline;
+  max-width: 36px;
+  margin: 0;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  position: relative;
+  top: 10px;
+}
+
+.commenter {
+  text-decoration: none;
+  color: #333;
+}
+
+.reactions {
+  text-align: right;
+  color: #888;
+  font-size: 16px;
+}

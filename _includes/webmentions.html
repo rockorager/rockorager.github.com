@@ -1,0 +1,27 @@
+{% assign reply_counter = 0 %}
+{% assign reaction_counter = 0 %}
+    {% for webmention in site.data.webmentions.links %}
+        {% assign target = webmention.target | remove: site.url %}
+        {% if target == page.url %}
+<!--List any other reactions-->
+            {% if webmention.activity.type != "reply" %}
+                {% if reaction_counter == 0 %}
+                    <h2>Reactions</h2>
+                    {% assign reaction_counter = 1 %}
+                {% endif %}
+                {% if webmention.data.author.url %}<a rel="nofollow" class="commenter" href="{{ webmention.data.author.url }}" title="{{ webmention.data.author.name }}, {{webmention.activity.type}}">{% endif %}{% if webmention.data.author.photo %}<img class="avatar" src="{{ webmention.data.author.photo }}" alt="{{ webmention.data.author.name }}">{% endif %}{% if webmention.data.author.url %}</a>{% endif %}
+            {% endif %}
+<!--List Comments-->
+            {% if webmention.activity.type == "reply" %}
+                {% if reply_counter == 0 %}
+                    <h2>Comments</h2>
+                    {% assign reply_counter = 1 %}
+                {% endif %}
+            <article>
+                <h3>{% if webmention.data.author.url %}<a rel="nofollow" class="commenter" href="{{ webmention.data.author.url }}">{% endif %}{% if webmention.data.author.photo %}<img class="avatar" src="{{ webmention.data.author.photo }}" alt="{{ webmention.data.author.name }}">{% endif %}{{ webmention.data.author.name }}{% if webmention.data.author.url %}</a>{% endif %}</h3>
+                <p><time><a rel="nofollow" href="{{ webmention.data.url }}">{{ webmention.data.published | date: "%a %b %d, %Y" }}</a></time></p>
+                {% if webmention.data.content %}<div>{{ webmention.data.content }}</div>{% endif %}
+            </article>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
