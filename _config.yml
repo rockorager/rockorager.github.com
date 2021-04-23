@@ -2,6 +2,9 @@ markdown: kramdown
 
 permalink: /:categories/:year-:month-:day-:title:output_ext
 
+plugins:
+  - jekyll-get-json
+
 markdown: kramdown
 
 kramdown:
@@ -14,3 +17,6 @@ description: Tim Culverhouse's Website
 author: 
   name: Tim Culverhouse
 
+jekyll_get_json:
+  - data: webmentions
+    json: 'https://webmention.io/api/mentions?token=zX2Hco2zyi1jOPitxiFGsA'
