@@ -25,7 +25,7 @@ permalink: feed.json
             "author": {
                 "name": "{{ site.author.name }}",
                 "url": "{{ site.url }}",
-		"avatar": "{{ site.url }}/tim.jpeg"
+		"avatar": "{{ site.url }}/assets/img/tim.jpeg"
             },
             "content_html": {{ post.content | jsonify }},
             "tags": {{ post.tags | jsonify }},
