@@ -1,4 +1,4 @@
 ---
-title: All Posts
+title: Posts
 layout: posts
 ---
