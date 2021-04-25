@@ -2,4 +2,6 @@ source "https://rubygems.org"
 gem 'jekyll'
 
 
-gem "jekyll-get-json", "~> 1.0"
+group :jekyll_plugins do
+    gem "jekyll-get-json", "~> 1.0"
+end
