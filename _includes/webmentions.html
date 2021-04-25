@@ -1,7 +1,7 @@
 {% assign reply_counter = 0 %}
 {% assign reaction_counter = 0 %}
     {% for webmention in site.data.webmentions.links %}
-        {% assign target = webmention.target | remove: site.url %}
+        {% assign target = webmention.target | remove: "https://timculverhouse.com" %}
         {% if target == page.url %}
 <!--List any other reactions-->
             {% if webmention.activity.type != "reply" %}
