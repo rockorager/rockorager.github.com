@@ -12,12 +12,12 @@
     <article class="h-entry">
             {% if post.category == "articles" %}
               <h2 class="p-name">{{post.title}}</h2>
-              <time class="dt-published" datetime="{{post.date}}"><a href="{{ post.url }}" class="u-url">{{ post.date | date: "%a %b %d, %Y" }}</a></time>
+              <time class="dt-published" datetime="{{post.date | date_to_xmlschema}}"><a href="{{ post.url }}" class="u-url">{{ post.date | date: "%a %b %d, %Y" }}</a></time>
               <a hidden class="h-card p-author" href="https://www.timculverhouse.com"><img src="/assets/img/tim.jpeg" alt="Tim Culverhouse">Tim Culverhouse</a>
               <section class="e-content">{{post.excerpt}} 
                 <p>(<a href="{{ post.url }}" class="u-url">read more</a>)</p></section>
             {% else %}
-            <time class="dt-published" datetime="{{post.date}}"><a href="{{ post.url }}" class="u-url">{{ post.date | date: "%a %b %d, %Y" }}</a></time>
+            <time class="dt-published" datetime="{{post.date | date_to_xmlschema}}"><a href="{{ post.url }}" class="u-url">{{ post.date | date: "%a %b %d, %Y" }}</a></time>
             <a hidden class="h-card p-author" href="https://www.timculverhouse.com"><img src="/assets/img/tim.jpeg" alt="Tim Culverhouse">Tim Culverhouse</a>
               <section class="e-content">{{ post.content}}</section>
             {% endif %}
