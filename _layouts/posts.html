@@ -6,7 +6,7 @@
   {% endif %}
 
   {% for post in filtered_posts %}
-    {% assign full_url = site.url | append: post.url %}
+    {% assign full_url = "https://timculverhouse.com" | append: post.url %}
     {% assign reactions = site.data.webmentions.links | where: "target", full_url %}
 
     <article class="h-entry">

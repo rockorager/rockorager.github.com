@@ -2,9 +2,6 @@ markdown: kramdown
 
 permalink: /:categories/:year-:month-:day-:title:output_ext
 
-plugins:
-  - jekyll-get-json
-
 markdown: kramdown
 
 kramdown:
