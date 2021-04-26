@@ -1,6 +1,6 @@
 {% include head.html %}
     <article class="h-entry">
-        <a hidden class="h-card p-author" href="https://www.timculverhouse.com"><img src="/assets/img/tim.jpeg" alt="Tim Culverhouse">Tim Culverhouse</a>
+        {% include h-card.html %}
         {% if page.updated != "" %}    
             <time class="dt-published" datetime="{{page.updated | date_to_xmlschema}}">Updated {{ page.updated | date: "%a %b %d, %Y" }}</time>
             <br>
