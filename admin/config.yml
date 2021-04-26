@@ -6,6 +6,8 @@ backend:
 
 media_folder: "assets/img"
 
+publish_mode: editorial_workflow
+
 site_url: https://timculverhouse.com
 
 collections:
