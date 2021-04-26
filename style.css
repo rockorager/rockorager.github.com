@@ -164,3 +164,8 @@ footer, footer a {
   font-size: 16px;
   text-align: center;
 }
+
+.reply-context {
+  font-size: 14px;
+  margin: 1rem 0;
+}
