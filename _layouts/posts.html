@@ -32,7 +32,7 @@
           <time class="dt-published" datetime="{{post.date | date_to_xmlschema}}"><a href="{{ post.url }}" class="u-url">{{ post.date | date: "%a %b %d, %Y" }}</a></time>
           {% include h-card.html %}
           <section class="repost-context">
-            🔁 <em>Repost of <a class="u-repost" href="{{ post.repost-of }}">{{ post.repost-of-text }}</a></em>
+            🔁 <em>Repost of <a class="u-repost-of" href="{{ post.repost-of }}">{{ post.repost-of-text }}</a></em>
           </section>
           <section class="e-content">{{ post.content}}</section>
 
