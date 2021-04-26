@@ -7,4 +7,4 @@ category: notes
 ---
 St. Paul, Minnesota. 1931. ([Full res](https://timculverhouse.com/assets/img/saint-paul-full-res.jpeg))
 
-![](/assets/img/saint-paul-2560.jpeg)
+![](https://timculverhouse.com/assets/img/saint-paul-2560.jpeg)
