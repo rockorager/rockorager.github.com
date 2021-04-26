@@ -62,3 +62,18 @@ collections:
       - {label: "Replying to link", name: "in-reply-to", widget: "string"}
       - {label: "Replying to text", name: "in-reply-to-text", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "reposts" # Used in routes, e.g., /admin/collections/blog
+    label: "Repost" # Used in the UI
+    folder: "_posts/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    filter: {field: "category", value: "reposts"}
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "repost"}
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss ZZ"}
+      - {label: "Updated Date", name: "updated", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss ZZ", required: false, default: ""}
+      - {label: "Category", name: "category", widget: "hidden", default: "resposts"}
+      - {label: "Replying to link", name: "repost-of", widget: "string"}
+      - {label: "Replying to text", name: "repost-of-text", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}

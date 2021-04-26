@@ -165,7 +165,7 @@ footer, footer a {
   text-align: center;
 }
 
-.reply-context {
+.reply-context, .repost-context {
   font-size: 14px;
   margin: 1rem 0;
 }

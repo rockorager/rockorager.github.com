@@ -1,0 +1,19 @@
+{% include head.html %}
+    <article class="h-entry">
+        {% include h-card.html %}
+        {% if page.updated != "" %}    
+        <time class="dt-published" datetime="{{page.updated | date_to_xmlschema}}">Updated {{ page.updated | date: "%a %b %d, %Y" }}</time>
+        <br>
+        <time class="dt-published" datetime="{{page.date | date_to_xmlschema}}">Originally published {{ page.date | date: "%a %b %d, %Y" }}</time>
+        {% else %}
+        <time class="dt-published" datetime="{{page.date | date_to_xmlschema}}">{{ page.date | date: "%a %b %d, %Y" }}</time>
+        {% endif %}
+        <section class="repost-context">
+            🔁 <em>Repost of <a class="u-repost" href="{{ page.repost-of }}">{{ page.repost-of-text }}</a></em>
+        </section>
+    <div class="p-name e-content">{{ content }}</div>
+    </article>
+
+    
+{% include webmentions.html %}
+{% include foot.html %}
