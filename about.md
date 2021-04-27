@@ -2,7 +2,6 @@
 title: About
 layout: page
 date: 2021-04-16 14:15:41
-updated: ""
 ---
 
 Hello! I am Tim. You've stumbled upon my website, welcome!

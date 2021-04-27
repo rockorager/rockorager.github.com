@@ -2,7 +2,6 @@
 title: Yoga
 layout: page
 date: 2021-04-21 12:03:11 -0500
-updated: ""
 ---
 
 ## 20 minutes or less
