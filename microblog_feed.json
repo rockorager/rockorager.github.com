@@ -21,11 +21,15 @@ permalink: feed.json
         {
             "id": "{{ post.url | absolute_url | sha1 }}",
             "url": "{{ site.url }}{{ post.url }}",
+            {% assign character_count = post.content | size %}
+            {% if character_count > 280 %}
+            "title": "{{ post.title }}",
+            {% endif %}
             "date_published": "{{ post.date | date_to_xmlschema }}",
             "author": {
                 "name": "{{ site.author.name }}",
                 "url": "{{ site.url }}",
-		"avatar": "{{ site.url }}/assets/img/tim.jpeg"
+		"avatar": "https://timculverhouse.com/assets/img/tim.jpeg"
             },
             "content_html": {{ post.content | jsonify }},
             "tags": {{ post.tags | jsonify }},
