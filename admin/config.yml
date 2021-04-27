@@ -69,7 +69,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "repost"}
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss ZZ"}
-      - {label: "Category", name: "category", widget: "hidden", default: "resposts"}
+      - {label: "Category", name: "category", widget: "hidden", default: "reposts"}
       - {label: "Replying to link", name: "repost-of", widget: "string"}
       - {label: "Replying to text", name: "repost-of-text", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
