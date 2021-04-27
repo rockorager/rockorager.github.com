@@ -18,6 +18,7 @@ permalink: feed.json
     },
     "items": [
         {% for post in site.posts %}
+        {% if post.category != "replies" %}
         {
             "id": "{{ post.url | absolute_url | sha1 }}",
             "url": "{{ site.url }}{{ post.url }}",
@@ -35,6 +36,7 @@ permalink: feed.json
             "tags": {{ post.tags | jsonify }},
             "image": "{{ post.image | absolute_url }}"
         }{% if forloop.last == false %},{% endif %}
+        {% endif %}
         {% endfor %}
     ]
 }
