@@ -13,7 +13,7 @@ First of all, the ads are getting downright creepy.
 
 Second, this site is built using principles from the [IndieWeb](https://www.indieweb.org), which I find to be really awesome.
 
-Third, well. I once spent a road trip as a kid *hand writing* HTML for a website. It's just always been something I enjoy, so this is just a fun project for me.
+Third, well. I once spent a road trip as a kid *hand-writing* HTML for a website. It's just always been something I enjoy, so this is just a fun project for me.
 
 I've mostly stopped using Facebook, except for some occasional professions of love for my wife, and photos of our kids and dog. I'm intending to migrate most of my web-life over to this. 
 
