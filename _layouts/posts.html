@@ -22,6 +22,19 @@
                     <p>(<a href="{{ post.url }}" class="u-url">read more</a>)</p>
                 </section>
 
+            {% when "replies" %}
+                <time class="dt-published" datetime="{{post.date | date_to_xmlschema}}">
+                    <a href="{{ post.url }}" class="u-url">{{ post.date | date: "%a %b %d, %Y" }}</a>
+                </time>
+                {% include h-card.html %}
+                <section class="reply-context">
+                    ↪️
+                    <em>Replying to
+                        <a class="u-in-reply-to" href="{{ post.in-reply-to }}">{{ post.in-reply-to-text }}</a>
+                    </em>
+                </section>
+                <section class="e-content">{{ post.content}}</section>
+
             {% when "reposts" %}
                 <time class="dt-published" datetime="{{post.date | date_to_xmlschema}}">
                     <a href="{{ post.url }}" class="u-url">{{ post.date | date: "%a %b %d, %Y" }}</a>
