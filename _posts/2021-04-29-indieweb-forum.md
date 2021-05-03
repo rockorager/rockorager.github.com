@@ -1,5 +1,5 @@
 ---
-title: Concept: Indieweb Forum
+title: Concept Indieweb Forum
 layout: article
 category: articles
 date: 2021-04-29 18:27:26 -0500
