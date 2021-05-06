@@ -59,8 +59,8 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "reply"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Category", name: "category", widget: "hidden", default: "replies"}
-      - {label: "Replying to link", name: "in-reply-to", widget: "string"}
-      - {label: "Replying to text", name: "in-reply-to-text", widget: "string"}
+      - {label: "Link", name: "link", widget: "string"}
+      - {label: "Link Title", name: "linktitle", widget: "string"}
       - {label: "Publish", name: "published", widget: "boolean", default: "true"}      
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "reposts" # Used in routes, e.g., /admin/collections/blog
@@ -74,7 +74,22 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "repost"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Category", name: "category", widget: "hidden", default: "reposts"}
-      - {label: "Repost of link", name: "repost-of", widget: "string"}
-      - {label: "Repost of text", name: "repost-of-text", widget: "string"}
+      - {label: "Repost of link", name: "link", widget: "string"}
+      - {label: "Repost of text", name: "linktitle", widget: "string"}
+      - {label: "Publish", name: "published", widget: "boolean", default: "true"}      
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "bookmarks" # Used in routes, e.g., /admin/collections/blog
+    label: "Bookmark" # Used in the UI
+    folder: "_posts/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    filter: {field: "category", value: "bookmarks"}
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "repost"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Category", name: "category", widget: "hidden", default: "bookmarks"}
+      - {label: "Bookmark link", name: "link", widget: "string"}
+      - {label: "Bookmark title", name: "linktitle", widget: "string"}
       - {label: "Publish", name: "published", widget: "boolean", default: "true"}      
       - {label: "Body", name: "body", widget: "markdown"}

@@ -2,9 +2,9 @@
 title: Test Article
 layout: article
 category: articles
-date: 2021-04-22 08:10:38
-updated: 2021-04-22 08:18:48
-published: false
+date: 2021-05-06T09:23:03-05:00
+updated: 2021-05-06T09:23:55-05:00
+published: true
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor, mi quis mollis pharetra, nulla risus malesuada arcu, in iaculis arcu est quis dolor. Maecenas rhoncus pulvinar egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas posuere purus dolor, condimentum sodales nisi suscipit quis. Nullam erat neque, pellentesque eget neque ut, lacinia dignissim est. Nulla in nunc pharetra, sagittis tellus id, congue ligula. Donec nisi nisl, consectetur ut neque nec, elementum pulvinar dui.

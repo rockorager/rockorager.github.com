@@ -10,52 +10,36 @@
     {% assign reactions = site.data.webmentions.links | where: "target", full_url %}
 
     <article class="h-entry">
+        <time class="dt-published" datetime="{{post.date}}">
+            <a href="{{ post.url }}" class="u-url">{{ post.date | date: "%a %b %d, %Y" }}</a>
+        </time>
+        {% include h-card.html %}
         {% case post.category %}
-
             {% when "articles" %}
                 <h2 class="p-name">{{post.title}}</h2>
-                <time class="dt-published" datetime="{{post.date | date_to_xmlschema}}">
-                    <a href="{{ post.url }}" class="u-url">{{ post.date | date: "%a %b %d, %Y" }}</a>
-                </time>
-                {% include h-card.html %}
                 <section class="e-content">{{post.excerpt}}
                     <p>(<a href="{{ post.url }}" class="u-url">read more</a>)</p>
                 </section>
 
             {% when "replies" %}
-                <time class="dt-published" datetime="{{post.date | date_to_xmlschema}}">
-                    <a href="{{ post.url }}" class="u-url">{{ post.date | date: "%a %b %d, %Y" }}</a>
-                </time>
-                {% include h-card.html %}
-                <section class="reply-context">
-                    ↪️
-                    <em>Replying to
-                        <a class="u-in-reply-to" href="{{ post.in-reply-to }}">{{ post.in-reply-to-text }}</a>
-                    </em>
+                <section class="link-context">
+                    ↪️<em>Replying to <a class="u-in-reply-to" href="{{ post.link }}">{{ post.linktitle }}</a></em>}
                 </section>
                 <section class="e-content">{{ post.content}}</section>
-
             {% when "reposts" %}
-                <time class="dt-published" datetime="{{post.date | date_to_xmlschema}}">
-                    <a href="{{ post.url }}" class="u-url">{{ post.date | date: "%a %b %d, %Y" }}</a>
-                </time>
-                {% include h-card.html %}
-                <section class="repost-context">
-                    🔁
-                    <em>Repost of
-                        <a class="u-repost-of" href="{{ post.repost-of }}">{{ post.repost-of-text }}</a>
-                    </em>
+                <section class="link-context">
+                    🔁<em>Repost of <a class="u-repost-of" href="{{ post.link }}">{{ post.linktitle }}</a></em>
                 </section>
                 <section class="e-content">{{ post.content}}</section>
-
-            {% else %}
-                <time class="dt-published" datetime="{{post.date | date_to_xmlschema}}">
-                    <a href="{{ post.url }}" class="u-url">{{ post.date | date: "%a %b %d, %Y" }}</a>
-                </time>
-                {% include h-card.html %}
+            {% when "bookmarks" %}
+                <section class="link-context">
+                    🔖 <em>Bookmark of <a class="u-bookmark-of" href="{{ post.link }}">{{ post.linktitle }}</a></em>
+                </section>
                 <section class="e-content">{{ post.content}}</section>
-
+            {% else %}
+            <section class="e-content">{{ post.content}}</section>
         {% endcase %}
+        
 
         {% if reactions.size >0 %}
             <p class="reactions">{{ reactions.size }}
