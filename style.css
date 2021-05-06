@@ -123,6 +123,7 @@ p {
 }
 nav {
   display: flex;
+  align-items: flex-end;
 }
 .h-card {
   flex-grow: 1;
@@ -130,6 +131,7 @@ nav {
 nav>a {
   margin-left: 20px;
 }
+
 header {
   font-size: 16px;
   margin-top: 1em;
