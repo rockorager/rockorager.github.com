@@ -19,7 +19,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "note"}
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss ZZ"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Category", name: "category", widget: "hidden", default: "notes"}
       - {label: "Publish", name: "published", widget: "boolean", default: "true"}      
       - {label: "Body", name: "body", widget: "markdown"}
@@ -32,7 +32,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "article"}
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss ZZ"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Category", name: "category", widget: "hidden", default: "articles"}
       - {label: "Publish", name: "published", widget: "boolean", default: "true"}      
       - {label: "Body", name: "body", widget: "markdown"}
@@ -45,7 +45,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss ZZ"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Publish", name: "published", widget: "boolean", default: "true"}      
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "replies" # Used in routes, e.g., /admin/collections/blog
@@ -57,7 +57,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "reply"}
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss ZZ"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Category", name: "category", widget: "hidden", default: "replies"}
       - {label: "Replying to link", name: "in-reply-to", widget: "string"}
       - {label: "Replying to text", name: "in-reply-to-text", widget: "string"}
@@ -72,7 +72,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Layout", name: "layout", widget: "hidden", default: "repost"}
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss ZZ"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Category", name: "category", widget: "hidden", default: "reposts"}
       - {label: "Repost of link", name: "repost-of", widget: "string"}
       - {label: "Repost of text", name: "repost-of-text", widget: "string"}
