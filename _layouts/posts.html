@@ -23,17 +23,17 @@
 
             {% when "replies" %}
                 <section class="link-context">
-                    ↩<em> Replying to <a class="u-in-reply-to" href="{{ post.link }}">{{ post.linktitle }}</a></em>
+                    ↩<em> Replied to <a class="u-in-reply-to" href="{{ post.link }}">{{ post.linktitle }}</a></em>
                 </section>
                 <section class="e-content">{{ post.content}}</section>
             {% when "reposts" %}
                 <section class="link-context">
-                    🔁<em> Repost of <a class="u-repost-of" href="{{ post.link }}">{{ post.linktitle }}</a></em>
+                    🔁<em> Shared <a class="u-repost-of" href="{{ post.link }}">{{ post.linktitle }}</a></em>
                 </section>
                 <section class="e-content">{{ post.content}}</section>
             {% when "bookmarks" %}
                 <section class="link-context">
-                    🔖<em> Bookmark of <a class="u-bookmark-of" href="{{ post.link }}">{{ post.linktitle }}</a></em>
+                    🔖<em> Bookmarked <a class="u-bookmark-of" href="{{ post.link }}">{{ post.linktitle }}</a></em>
                 </section>
                 <section class="e-content">{{ post.content}}</section>
             {% else %}
