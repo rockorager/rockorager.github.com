@@ -121,20 +121,33 @@ time a:hover {
 p {
   margin-top: 0px;
 }
-
+nav {
+  display: flex;
+}
+.h-card {
+  flex-grow: 1;
+}
+nav>a {
+  margin-left: 20px;
+}
 header {
   font-size: 16px;
+  margin-top: 1em;
 }
 
 header a {
-  color: #888;
+  color: #666;
   text-decoration: none;
   margin-right: 0.5rem;
 }
 
+header a:hover {
+  color: red;
+}
+
 hr {
   border-top: 1px solid #888;
-  margin-bottom: 2rem;
+  margin-bottom: 2em;
 }
 
 .avatar {
@@ -143,8 +156,7 @@ hr {
   margin: 0;
   margin-right: 0.5rem;
   border-radius: 50%;
-  position: relative;
-  top: 10px;
+  vertical-align:middle;
 }
 
 .commenter {
