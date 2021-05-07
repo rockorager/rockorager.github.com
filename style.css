@@ -20,6 +20,7 @@ img {
   max-width: 100%;
   display: block;
   margin: 0.5em auto;
+  max-height: 600px;
 }
 
 figcaption, img + em {
