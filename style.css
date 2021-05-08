@@ -144,6 +144,11 @@ header a {
   margin-right: 0.5rem;
 }
 
+.header-icon {
+  width: 16px;
+  color: #333;
+}
+
 header a:hover {
   color: red;
 }
