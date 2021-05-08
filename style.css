@@ -15,6 +15,16 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Palatino Linotype', Palatino, serif;
 }
 
+a{
+  color: #0000c0
+}
+a:visited {
+  color: #000068;
+}
+a:hover {
+  color: red;
+}
+
 /* Make images easier to work with */
 img {
   max-width: 100%;
@@ -111,13 +121,9 @@ article {
 }
 
 time, time a {
-  color: #888;
   font-size: 16px;
 }
 
-time a:hover {
-  color: red;
-}
 
 p {
   margin-top: 0px;
@@ -138,7 +144,7 @@ header {
   margin-top: 1em;
 }
 
-header a {
+header a, header a:visited {
   color: #666;
   text-decoration: none;
   margin-right: 0.5rem;
@@ -149,9 +155,6 @@ header a {
   color: #333;
 }
 
-header a:hover {
-  color: red;
-}
 
 hr {
   border-top: 1px solid #888;
