@@ -2,18 +2,12 @@ markdown: kramdown
 
 permalink: /:categories/:year-:month-:day-:title:output_ext
 
-markdown: kramdown
-
 kramdown:
   hard_wrap: true
 
 # site data 
 url: https://timculverhouse.com
-title: CulverWeb
+title: Tim Culverhouse
 description: Tim Culverhouse's Website
 author: 
   name: Tim Culverhouse
-
-jekyll_get_json:
-  - data: webmentions
-    json: 'https://webmention.io/api/mentions?token=zX2Hco2zyi1jOPitxiFGsA'
