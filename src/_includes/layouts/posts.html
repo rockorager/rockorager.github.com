@@ -2,45 +2,48 @@
 layout: base
 ---
 <main>
-{% if page.tag %}
-    {% assign filtered_posts = site.posts | where: "category", page.tag %}
+
+
+{% if tag %}
+    {% assign filtered_posts = collections.posts | where: "data.category", tag %}
+    {{tag}}
 {% else %}
-    {% assign filtered_posts = site.posts %}
+    {% assign filtered_posts = collections.posts %}
 {% endif %}
 
 {% for post in filtered_posts %}
     {% assign full_url = "https://timculverhouse.com" | append: post.url %}
-    {% assign reactions = site.data.webmentions.links | where: "target", full_url %}
-
+    {% assign reactions = webmentions.links | where: "target", full_url %}
+{{full_url}}
     <article class="h-entry">
         <time class="dt-published" datetime="{{post.date}}">
             <a href="{{ post.url }}" class="u-url">{{ post.date | date: "%a %b %d, %Y" }}</a>
         </time>
         {% include partials/h-card.html %}
-        {% case post.category %}
+        {% case post.data.category %}
             {% when "articles" %}
-                <h2 class="p-name">{{post.title}}</h2>
-                <section class="e-content">{{post.excerpt}}
+                <h2 class="p-name">{{post.data.title}}</h2>
+                <section class="e-content">{{post.data.excerpt}}
                     <p>(<a href="{{ post.url }}" class="u-url">read more</a>)</p>
                 </section>
 
             {% when "replies" %}
                 <section class="link-context">
-                    💬<em> Replied to <a class="u-in-reply-to" href="{{ post.link }}">{{ post.linktitle }}</a></em>
+                    💬<em> Replied to <a class="u-in-reply-to" href="{{ post.data.link }}">{{ post.data.linktitle }}</a></em>
                 </section>
-                <section class="e-content">{{ post.content}}</section>
+                <section class="e-content">{{ post.templateContent}}</section>
             {% when "reposts" %}
                 <section class="link-context">
-                    🔁<em> Shared <a class="u-repost-of" href="{{ post.link }}">{{ post.linktitle }}</a></em>
+                    🔁<em> Shared <a class="u-repost-of" href="{{ post.data.link }}">{{ post.data.linktitle }}</a></em>
                 </section>
-                <section class="e-content">{{ post.content}}</section>
+                <section class="e-content">{{ post.templateContent}}</section>
             {% when "bookmarks" %}
                 <section class="link-context">
-                    🔖<em> Bookmarked <a class="u-bookmark-of" href="{{ post.link }}">{{ post.linktitle }}</a></em>
+                    🔖<em> Bookmarked <a class="u-bookmark-of" href="{{ post.data.link }}">{{ post.data.linktitle }}</a></em>
                 </section>
-                <section class="e-content">{{ post.content}}</section>
-            {% else %}
-            <section class="e-content">{{ post.content}}</section>
+                <section class="e-content">{{ post.templateContent}}</section>
+            {% when "notes" %}
+            <section class="e-content">{{ post.templateContent}}</section>
         {% endcase %}
         
 

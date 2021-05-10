@@ -1,6 +1,6 @@
 {% assign reply_counter = 0 %}
 {% assign reaction_counter = 0 %}
-    {% for webmention in site.data.webmentions.links %}
+    {% for webmention in webmentions.links %}
         {% assign target = webmention.target | remove: "https://timculverhouse.com" %}
         <a hidden href="{{ target }}" ></a>
         <a hidden href="{{ webmention.target }}" ></a>

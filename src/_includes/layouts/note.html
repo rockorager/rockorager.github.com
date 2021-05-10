@@ -1,11 +1,12 @@
 ---
 layout: base
+permalink: "{{ page.filePathStem }}.html"
 ---
 <main>
     <article class="h-entry">
     {% include partials/h-card.html %}
     {% include partials/time.html %}
-    {% case page.category %}
+    {% case category %}
         {% when "replies" %}
             {% include partials/context-reply.html %}
         {% when "reposts" %}

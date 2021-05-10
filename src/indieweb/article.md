@@ -16,4 +16,4 @@ Sed sem sapien, rutrum at placerat nec, pellentesque eget neque. Curabitur matti
 
 Morbi non sapien gravida, dictum nibh eget, vehicula nisi. Cras rhoncus euismod felis, id feugiat sem sodales sit amet. Ut eu turpis pharetra, sollicitudin justo ac, posuere augue. Etiam sagittis fermentum dui in luctus. Morbi venenatis scelerisque maximus. Nulla sodales purus ut tellus commodo aliquam. Nulla sit amet eleifend nisl. In eget malesuada odio. 
 
-     <a href="https://indieforums.net" class="u-syndication"></a>
+<a href="https://indieforums.net" class="u-syndication"></a>
