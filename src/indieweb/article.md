@@ -1,6 +1,6 @@
 ---
 title: Test Article
-layout: article
+layout: layouts/article
 category: articles
 date: 2021-04-22T08:10:38
 updated: 2021-04-22T08:18:48

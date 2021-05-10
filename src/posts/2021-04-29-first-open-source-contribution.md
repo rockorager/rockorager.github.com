@@ -1,6 +1,6 @@
 ---
 title: First Open Source Contribution
-layout: note
+layout: layouts/note
 date: 2021-04-29T11:18:48-0500
 category: notes
 ---

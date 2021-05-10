@@ -1,6 +1,6 @@
 ---
 title: Now
-layout: page
+layout: layouts/page
 date: 2021-04-25T04:22:21-0500
 ---
 - 🛹 Learning to skateboard

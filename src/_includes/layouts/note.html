@@ -1,0 +1,21 @@
+---
+layout: base
+---
+<main>
+    <article class="h-entry">
+    {% include partials/h-card.html %}
+    {% include partials/time.html %}
+    {% case page.category %}
+        {% when "replies" %}
+            {% include partials/context-reply.html %}
+        {% when "reposts" %}
+            {% include partials/context-repost.html %}
+        {% when "bookmarks" %}
+            {% include partials/context-bookmark.html %}
+    {% endcase %}
+        <div class="e-content">{{ content }}</div>
+    </article>
+
+    
+{% include partials/webmentions.html %}
+</main>

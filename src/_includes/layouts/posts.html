@@ -1,4 +1,7 @@
-{% include head.html %}
+---
+layout: base
+---
+<main>
 {% if page.tag %}
     {% assign filtered_posts = site.posts | where: "category", page.tag %}
 {% else %}
@@ -13,7 +16,7 @@
         <time class="dt-published" datetime="{{post.date}}">
             <a href="{{ post.url }}" class="u-url">{{ post.date | date: "%a %b %d, %Y" }}</a>
         </time>
-        {% include h-card.html %}
+        {% include partials/h-card.html %}
         {% case post.category %}
             {% when "articles" %}
                 <h2 class="p-name">{{post.title}}</h2>
@@ -48,4 +51,4 @@
     </article>
 {% endfor %}
 
-{% include foot.html %}
+</main>

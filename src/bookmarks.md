@@ -1,5 +1,5 @@
 ---
 title: Bookmarks
-layout: posts
+layout: layouts/posts
 tag: bookmarks
 ---

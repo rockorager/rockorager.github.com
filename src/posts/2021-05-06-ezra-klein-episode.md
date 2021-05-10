@@ -1,6 +1,6 @@
 ---
 title: Ezra Klein Episode
-layout: note
+layout: layouts/note
 category: bookmarks
 published: true
 date: 2021-05-06T06:44:58-0500

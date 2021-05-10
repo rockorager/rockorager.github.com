@@ -1,0 +1,14 @@
+---
+layout: base
+permalink: "{{ page.filePathStem }}.html"
+---
+
+<main>
+    <article class="h-entry">
+        <h1 class="p-name">{{ page.title }}</h1>
+        {% include partials/h-card.html %}
+        <div class="e-content">{{ content | safe }}</div>
+        {% include partials/time.html %}
+    </article>
+{% include partials/webmentions.html %}
+</main>

@@ -1,5 +1,5 @@
 ---
 title: Notes
-layout: posts
+layout: layouts/posts
 tag: notes
 ---

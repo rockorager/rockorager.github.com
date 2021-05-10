@@ -1,6 +1,9 @@
-{% include head.html %}
+---
+layout: base
+---
+<main>
 <article class="h-entry">
-    {% include h-card.html %}
+    {% include partials/h-card.html %}
 <div class="p-name e-content">{{ content }}</div>
 </article>
-{% include foot.html %}
+</main>

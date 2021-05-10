@@ -1,6 +1,6 @@
 ---
 title: About
-layout: page
+layout: layouts/page
 date: 2021-04-16T14:15:41
 ---
 

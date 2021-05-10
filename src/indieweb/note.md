@@ -1,5 +1,5 @@
 ---
-layout: note
+layout: layouts/note
 date: 2021-04-23T14:03:04-0500
 category: notes
 ---

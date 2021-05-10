@@ -1,6 +1,6 @@
 ---
 title: https://thedent.net/2021/04/28/there-seems-to.html
-layout: note
+layout: layouts/note
 date: 2021-04-28T16:52:00-0500
 category: replies
 link: https://thedent.net/2021/04/28/there-seems-to.html

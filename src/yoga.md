@@ -1,6 +1,6 @@
 ---
 title: Yoga
-layout: page
+layout: layouts/page
 date: 2021-04-21T12:03:11-0500
 ---
 

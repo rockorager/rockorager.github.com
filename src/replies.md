@@ -1,5 +1,5 @@
 ---
 title: Replies
-layout: posts
+layout: layouts/posts
 tag: replies
 ---

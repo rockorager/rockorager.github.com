@@ -1,6 +1,6 @@
 ---
 title: Reply
-layout: note
+layout: layouts/note
 date: 2021-05-05T08:45:40-0500
 category: replies
 in-reply-to: https://timculverhouse.com/indieweb/article
