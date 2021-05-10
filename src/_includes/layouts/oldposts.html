@@ -3,11 +3,18 @@ layout: base
 ---
 <main>
 
-{% for post in posts %}
+
+{% if tag %}
+    {% assign filtered_posts = collections.posts | where: "data.category", tag %}
+    {{tag}}
+{% else %}
+    {% assign filtered_posts = collections.posts %}
+{% endif %}
+
+{% for post in filtered_posts %}
     {% assign full_url = "https://timculverhouse.com" | append: post.url %}
     {% assign reactions = webmentions.links | where: "target", full_url %}
-    {{ webmentions.links | size }}
-    {{ reactions }}
+{{full_url}}
     <article class="h-entry">
         <time class="dt-published" datetime="{{post.date}}">
             <a href="{{ post.url }}" class="u-url">{{ post.date | date: "%a %b %d, %Y" }}</a>
@@ -19,6 +26,7 @@ layout: base
                 <section class="e-content">{{post.data.excerpt}}
                     <p>(<a href="{{ post.url }}" class="u-url">read more</a>)</p>
                 </section>
+
             {% when "replies" %}
                 <section class="link-context">
                     💬<em> Replied to <a class="u-in-reply-to" href="{{ post.data.link }}">{{ post.data.linktitle }}</a></em>

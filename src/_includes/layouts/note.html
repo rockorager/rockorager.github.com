@@ -4,6 +4,7 @@ permalink: "{{ page.filePathStem }}.html"
 ---
 <main>
     <article class="h-entry">
+    {{ page.filePathStem }}
     {% include partials/h-card.html %}
     {% include partials/time.html %}
     {% case category %}

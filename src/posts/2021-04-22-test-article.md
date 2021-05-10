@@ -2,6 +2,7 @@
 title: Test Article
 layout: layouts/article
 category: articles
+type: article
 date: 2021-05-06T09:23:03-05:00
 updated: 2021-05-06T09:23:55-05:00
 published: false
