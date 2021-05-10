@@ -25,6 +25,7 @@ a:hover {
   color: red;
 }
 
+
 /* Make images easier to work with */
 img {
   max-width: 100%;
@@ -149,6 +150,9 @@ header a, header a:visited {
   text-decoration: none;
   margin-right: 0.5rem;
 }
+header a:hover{
+  color: red;
+}
 
 .header-icon {
   width: 16px;
@@ -192,3 +196,4 @@ footer, footer a {
   font-size: 14px;
   margin-bottom: 1rem;
 }
+
