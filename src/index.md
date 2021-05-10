@@ -1,7 +1,7 @@
 ---
 title: Home
 layout: index
-date: 2021-04-23 19:23:00 -0500
+date: 2021-05-10T09:58:17-05:00
 ---
 
 You could be good today, but instead you choose tomorrow.

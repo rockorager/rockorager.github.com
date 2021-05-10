@@ -1,7 +1,7 @@
 ---
 title: About
 layout: page
-date: 2021-04-16 14:15:41
+date: 2021-04-16T14:15:41
 ---
 
 Hello! I am Tim. You've stumbled upon my website, welcome!

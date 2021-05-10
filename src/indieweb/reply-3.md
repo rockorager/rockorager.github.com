@@ -1,7 +1,7 @@
 ---
 title: Reply
 layout: note
-date: 2021-05-05 08:45:40 -0500
+date: 2021-05-05T08:45:40-0500
 category: replies
 in-reply-to: https://timculverhouse.com/indieweb/article
 in-reply-to-text: reply to this post

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/assets/icons/icons.css">
+    <!--IndieWeb-->
+    <link rel="me" href="mailto:tim@timculverhouse.com">
+    <link rel="me" href="https://github.com/rockorager">
+    <link rel="me" href="https://micro.blog/tculverhouse">
+    <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+    <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
+    <link rel="webmention" href="https://webmention.io/timculverhouse.com/webmention">
+    <link rel="microsub" href="https://aperture.p3k.io/microsub/643">
+    <link rel="micropub" href="https://micropubendpoint.herokuapp.com/micropub/main">
+  </head>
+
+  <body>
+    {% include partials/header.html %}
+        {{ content }}
+    {% include partials/footer.html% %}
+    </body>
+</html>
