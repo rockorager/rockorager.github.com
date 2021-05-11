@@ -31,7 +31,7 @@ module.exports = function (eleventyConfig) {
         });
     eleventyConfig.addCollection("bookmarks", function(collectionApi) {
         return collectionApi.getFilteredByGlob("src/posts/*").filter(function (post) {
-            return (post.data.type === "bookmarks");
+            return (post.data.type === "bookmark");
             }).reverse();
         });
     eleventyConfig.addCollection("notes", function(collectionApi) {

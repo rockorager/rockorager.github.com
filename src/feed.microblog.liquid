@@ -1,40 +1,26 @@
 ---
-permalink: feed.json
+permalink: "feed.microblog.xml"
 ---
-
-{
-    "version": "https://jsonfeed.org/version/1",
-    "title": "{{ site.title }}",
-    "home_page_url": "{{ site.url }}",
-    "feed_url": "{{ site.url }}/feed.json",
-    "description": "{{ site.description }}",
-    "icon": "{{ site.url }}{{ site.logo }}",
-    "favicon": "{{ site.url }}/favicon.ico",
-    "expired": false,
-    "author": {
-        "name": "{{ site.author.name }}",
-        "url": "{{ site.url }}"
-    },
-    "items": [
-        {% for post in collections.posts %}
-        {% if post.data.type != "reply" %}
-        {
-            "id": "{{ post.url }}",
-            "url": "{{ site.url }}{{ post.url }}",
-            {% assign character_count = post.templateContent | size %}
-            {% if character_count > 280 %}
-            "title": "{{ post.data.title }}",
-            {% endif %}
-            "date_published": "{{ post.date | date_to_xmlschema }}",
-            "author": {
-                "name": "{{ site.author.name }}",
-                "url": "{{ site.url }}",
-		    "avatar": "{{site.url}}{{site.logo}}"
-            },
-            "content_html": "{{ post.templateContent | escape }}"",
-            "tags": "{{ post.data.tags | escape }}"
-        }{% if forloop.last == false %},{% endif %}
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title | escape }}</title>
+    <description>{{ site.description | escape }}</description>
+    <link>{{site.url}}</link>
+    <atom:link href="{{site.url}}/feed.xml" rel="self" type="application/rss+xml"/>
+    {% for post in collections.posts limit:1000 %}
+    {% if post.data.type != "reply" %}
+      <item>
+        {% assign character_count = post.templateContent | size %}
+        {% if character_count > 280 %}
+        <title>{{ post.data.title | escape }}</title>
         {% endif %}
-        {% endfor %}
-    ]
-}
+        <description>{{ post.templateContent | escape }}</description>
+        <pubDate>{{ post.data.date }}</pubDate>
+        <link>{{ post.url | prepend: site.url }}</link>
+        <guid isPermaLink="true">{{ post.url | prepend: site.url }}</guid>
+      </item>
+      {% endif %}
+    {% endfor %}
+  </channel>
+</rss>

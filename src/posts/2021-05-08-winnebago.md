@@ -1,7 +1,6 @@
 ---
 title: Winnebago
 layout: layouts/note
-category: notes
 published: true
 date: 2021-05-08T23:50:05-05:00
 type: note

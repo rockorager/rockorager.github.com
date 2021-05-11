@@ -6,12 +6,12 @@ permalink: "/{{ type | pluralize }}/{{ page.date | date: '%Y-%m-%d' }}-{{ page.f
     <article class="h-entry">
     {% include partials/h-card.html %}
     {% include partials/time.html %}
-    {% case category %}
-        {% when "replies" %}
+    {% case type %}
+        {% when "reply" %}
             {% include partials/context-reply.html %}
-        {% when "reposts" %}
+        {% when "repost" %}
             {% include partials/context-repost.html %}
-        {% when "bookmarks" %}
+        {% when "bookmark" %}
             {% include partials/context-bookmark.html %}
     {% endcase %}
         <div class="e-content">{{ content }}</div>
