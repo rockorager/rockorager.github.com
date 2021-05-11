@@ -1,5 +1,4 @@
 ---
-layout: null
 permalink: feed.json
 ---
 
@@ -17,24 +16,23 @@ permalink: feed.json
         "url": "{{ site.url }}"
     },
     "items": [
-        {% for post in site.posts %}
-        {% if post.category != "replies" %}
+        {% for post in collections.posts %}
+        {% if post.data.type != "reply" %}
         {
-            "id": "{{ post.url | absolute_url | sha1 }}",
+            "id": "{{ post.url }}",
             "url": "{{ site.url }}{{ post.url }}",
-            {% assign character_count = post.content | size %}
+            {% assign character_count = post.templateContent | size %}
             {% if character_count > 280 %}
-            "title": "{{ post.title }}",
+            "title": "{{ post.data.title }}",
             {% endif %}
             "date_published": "{{ post.date | date_to_xmlschema }}",
             "author": {
                 "name": "{{ site.author.name }}",
                 "url": "{{ site.url }}",
-		"avatar": "https://timculverhouse.com/assets/img/tim.jpeg"
+		    "avatar": "{{site.url}}{{site.logo}}"
             },
-            "content_html": {{ post.content | jsonify }},
-            "tags": {{ post.tags | jsonify }},
-            "image": "{{ post.image | absolute_url }}"
+            "content_html": "{{ post.templateContent | escape }}"",
+            "tags": "{{ post.data.tags | escape }}"
         }{% if forloop.last == false %},{% endif %}
         {% endif %}
         {% endfor %}

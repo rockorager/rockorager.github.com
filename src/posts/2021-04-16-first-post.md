@@ -1,6 +1,7 @@
 ---
 title: First
 layout: layouts/note
+type: note
 date: 2021-04-16T13:18:08-0500
 category: notes
 published: false

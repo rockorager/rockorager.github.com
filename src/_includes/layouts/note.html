@@ -1,10 +1,9 @@
 ---
 layout: base
-permalink: "{{ page.filePathStem }}.html"
+permalink: "/{{ type | pluralize }}/{{ page.date | date: '%Y-%m-%d' }}-{{ page.fileSlug }}.html"
 ---
 <main>
     <article class="h-entry">
-    {{ page.filePathStem }}
     {% include partials/h-card.html %}
     {% include partials/time.html %}
     {% case category %}
@@ -17,7 +16,6 @@ permalink: "{{ page.filePathStem }}.html"
     {% endcase %}
         <div class="e-content">{{ content }}</div>
     </article>
-
     
 {% include partials/webmentions.html %}
 </main>

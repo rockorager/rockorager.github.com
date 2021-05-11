@@ -6,39 +6,36 @@ layout: base
 {% for post in posts %}
     {% assign full_url = "https://timculverhouse.com" | append: post.url %}
     {% assign reactions = webmentions.links | where: "target", full_url %}
-    {{ webmentions.links | size }}
-    {{ reactions }}
     <article class="h-entry">
         <time class="dt-published" datetime="{{post.date}}">
             <a href="{{ post.url }}" class="u-url">{{ post.date | date: "%a %b %d, %Y" }}</a>
         </time>
         {% include partials/h-card.html %}
-        {% case post.data.category %}
-            {% when "articles" %}
+        {% case post.data.type %}
+            {% when "article" %}
                 <h2 class="p-name">{{post.data.title}}</h2>
-                <section class="e-content">{{post.data.excerpt}}
-                    <p>(<a href="{{ post.url }}" class="u-url">read more</a>)</p>
-                </section>
-            {% when "replies" %}
+                <section class="e-content">{{post.data.summary }}
+                </section><br />
+                <p>(<a href="{{ post.url }}" class="u-url">read more</a>)</p>
+            {% when "reply" %}
                 <section class="link-context">
                     💬<em> Replied to <a class="u-in-reply-to" href="{{ post.data.link }}">{{ post.data.linktitle }}</a></em>
                 </section>
                 <section class="e-content">{{ post.templateContent}}</section>
-            {% when "reposts" %}
+            {% when "repost" %}
                 <section class="link-context">
                     🔁<em> Shared <a class="u-repost-of" href="{{ post.data.link }}">{{ post.data.linktitle }}</a></em>
                 </section>
                 <section class="e-content">{{ post.templateContent}}</section>
-            {% when "bookmarks" %}
+            {% when "bookmark" %}
                 <section class="link-context">
                     🔖<em> Bookmarked <a class="u-bookmark-of" href="{{ post.data.link }}">{{ post.data.linktitle }}</a></em>
                 </section>
                 <section class="e-content">{{ post.templateContent}}</section>
-            {% when "notes" %}
+            {% when "note" %}
             <section class="e-content">{{ post.templateContent}}</section>
         {% endcase %}
         
-
         {% if reactions.size >0 %}
             <p class="reactions">{{ reactions.size }}
                 Reactions</p>

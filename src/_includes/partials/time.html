@@ -1,7 +1,7 @@
-        {% if page.updated %}    
-            <time class="dt-published" datetime="{{updated}}">Updated {{ updated | date: "%a %b %d, %Y" }}</time>
-            <br>
-            <time class="dt-published" datetime="{{date}}">Originally published {{ date | date: "%a %b %d, %Y" }}</time>
-        {% else %}
-            <time class="dt-published" datetime="{{date}}">{{ date | date: "%a %b %d, %Y" }}</time>
-        {% endif %}
+<a href="{{ page.url }}" class="u-url">
+{%- if page.updated -%}    
+    <time class="dt-published" datetime="{{updated}}">Updated {{ updated | date: "%a %b %d, %Y" }}</time>
+{%- else -%}
+    <time class="dt-published" datetime="{{date}}">{{ date | date: "%a %b %d, %Y" }}</time>
+{%- endif -%}
+</a>
